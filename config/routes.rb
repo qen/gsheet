@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # omniauth callback url
   get '/auth/:provider/callback', to: 'authentications#google'
 
-  root to: 'visitors#home'
+  resources :campaigns, only: %i(update)
 
+  root to: 'visitors#home'
 end

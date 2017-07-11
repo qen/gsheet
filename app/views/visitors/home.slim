@@ -1,6 +1,9 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    .toastr-message style="padding: 10px; border: 1px solid #ccc; background-color: #efefef; color: #aaa" = msg
 
 
-h1 Hello World
+h1 Talkpush Exercice
 
 - if session['google_oauth2_refresh_token'].blank?
   = link_to 'Authorize Spreedsheet', '/auth/google_oauth2'
@@ -21,3 +24,7 @@ h1 Hello World
           tr
             - @ss.headers.each do |col|
               td = row[col]
+
+
+    hr
+    = link_to 'Submit to TalkPush Api', campaign_path(Rails.application.secrets[:talkpush]['campaign_id']), data: { method: 'PUT', confirm: 'Continue?' }

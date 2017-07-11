@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ensure that the Environment Variable `TALKPUSH_KEY` and `TALKPUSH_SECRET` is defined
 
-Things you may want to cover:
+run
 
-* Ruby version
+    TALKPUSH_KEY=api-key TALKPUSH_SECRET=api-secret rails
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
