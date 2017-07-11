@@ -24,4 +24,12 @@ class SpreadSheet
     @file ||= @session.file_by_title 'Talkpush exercice'
   end
 
+  def rows
+    @rows ||= file.worksheets[0].list.map {|x| x.to_hash }
+  end
+
+  def headers
+    @headers = rows.first.keys
+  end
+
 end

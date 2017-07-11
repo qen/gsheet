@@ -5,4 +5,19 @@ h1 Hello World
 - if session['google_oauth2_refresh_token'].blank?
   = link_to 'Authorize Spreedsheet', '/auth/google_oauth2'
 
-= session['google_oauth2_refresh_token']
+- if @ss.present? and @ss.file.blank?
+  div
+    span> Spreadsheet
+    b> Talkpush exercice
+    span> Does not exists
+
+- else
+    table
+      tbody
+        tr
+          - @ss.headers.each do |col|
+            th = col
+        - @ss.rows.each_with_index do |row, idx|
+          tr
+            - @ss.headers.each do |col|
+              td = row[col]

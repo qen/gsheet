@@ -1,0 +1,4 @@
+
+module TalkPush
+
+end
