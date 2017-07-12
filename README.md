@@ -4,5 +4,5 @@ Ensure that the Environment Variable `TALKPUSH_KEY` and `TALKPUSH_SECRET` is def
 
 run
 
-    TALKPUSH_KEY=api-key TALKPUSH_SECRET=api-secret rails
+    TALKPUSH_KEY=api-key TALKPUSH_SECRET=api-secret rails s
 
