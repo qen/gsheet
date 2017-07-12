@@ -16,10 +16,6 @@ class SpreadSheet
     self
   end
 
-  def [](obj)
-    WorkSheet.new obj, self
-  end
-
   def file
     @file ||= @session.file_by_title 'Talkpush exercice'
   end
